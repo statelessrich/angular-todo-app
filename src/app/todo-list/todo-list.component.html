@@ -1,0 +1,16 @@
+<section (mouseleave)="item.mouseover=false" (mouseover)="item.mouseover=true" class="list" *ngFor="let item of items" type="text">
+
+    <!-- checkbox -->
+    <section class="flex-container">
+        <input [class.checkbox--visible]="item.mouseover" class="checkbox" type="checkbox" name="done" [(ngModel)]="item.done">
+    </section>
+
+    <!-- todo item -->
+    <input class="list__item" [class.list__item--done]="item.done" type="text" value="{{item.text}}">
+
+    <!-- delete button -->
+    <section class="flex-container">
+        <a [class.delete--visible]="item.mouseover" class="delete" href="#" (click)="deleteItem(item)">x</a>
+    </section>
+
+</section>

@@ -1,0 +1,4 @@
+<form (ngSubmit)="newItem.text && addItem()">
+    <!-- todo input -->
+    <input name="text" type="text" placeholder="todo" [(ngModel)]="newItem.text" autofocus>
+</form>
